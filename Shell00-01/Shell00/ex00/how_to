@@ -1,0 +1,69 @@
+Bienvenue dans le tout premier exercice !
+
+Ici, l'objectif est d'apprendre à manipuler des fichiers simples à l'aide des commandes de base du terminal.
+Cet exercice ne nécessite aucune fonction spécifique, juste une bonne compréhension des commandes et de la gestion des fichiers dans un terminal.
+
+Dans cet exercice, nous allons créer un fichier appelé z, et ce fichier devra afficher "Z" suivi d'un retour à la ligne lorsqu'on le lit avec la commande cat.
+
+Allez, on passe aux étapes !
+
+
+Étape 1 : Créer le répertoire ex00/
+D'abord, créons un répertoire dans lequel nous allons travailler. Si le répertoire ex00/ existe déjà, vous pouvez passer à l'étape suivante.
+
+Pour créer le répertoire, tapez cette commande dans le terminal : mkdir ex00
+Cela crée un dossier ex00 dans votre répertoire actuel. Vous pouvez y accéder en tapant cd ex00 (ce n'est pas nécessaire pour l'instant, mais ça pourrait être utile pour les étapes suivantes).
+
+
+Étape 2 : Créer le fichier z
+Ensuite, il faut créer un fichier vide nommé z dans le répertoire ex00/. Le fichier doit être vide au début, car on va y ajouter notre contenu juste après.
+
+Pour cela, tapez la commande suivante : touch ex00/z
+Ou alors : cd ex00 puis touch z
+La commande touch crée un fichier vide nommé z dans le répertoire ex00/ (voir la commande cd).
+
+
+Étape 3 : Ajouter le contenu "Z" suivi d'un retour à la ligne
+Maintenant, il faut que ce fichier affiche "Z" suivi d'un retour à la ligne lorsqu'on le lit avec la commande cat. Pour ça, on va utiliser la commande echo.
+
+Tapez cette commande dans le terminal : echo "Z" > ex00/z
+Ce qu'il se passe ici :
+echo "Z" affiche simplement la chaîne "Z".
+Le symbole > indique qu'on veut rediriger cette sortie dans un fichier, ici ex00/z.
+Le fichier z contient désormais la chaîne "Z" suivie d'un retour à la ligne (car echo ajoute toujours un retour à la ligne à la fin de la chaîne par défaut).
+
+
+Étape 4 : Vérifier le contenu du fichier z
+Enfin, on va vérifier si tout est bon. Utilisez la commande cat pour lire le fichier et voir ce qu'il contient : cat z
+Comme dans le sujet ;) Si tu obtiens EXACTEMENT le même résultat que sur le sujet tout est bon 👌
+
+
+
+Résumé des étapes :
+Créer le répertoire ex00 avec mkdir ex00 (si ce n'est pas déjà fait).
+Créer un fichier vide z dans ce répertoire avec touch ex00/z.
+Ajouter "Z" au fichier avec echo "Z" > ex00/z.
+Vérifier le contenu du fichier avec cat ex00/z.
+
+
+Commandes à retenir :
+mkdir ex00
+touch ex00/z
+echo "Z" > ex00/z
+cat ex00/z
+
+
+
+
+
+En supplément, voici quelques conseils pour la suite de ta piscine :
+
+🕺 Lisez attentivement chaque sujet. C'est vraiment important !
+🕺 Faites attention à votre fichier de rendu (!!!!!).
+🕺 Ne vous précipitez pas, avancez à votre rythme.
+🕺 Ne vous laissez pas influencer par les autres, chacun suit son propre chemin (à méditer).
+🕺 Dormez bien et reposez-vous !!
+🕺 Ne lâchez rien, continuez d'avancer, même quand c'est difficile.
+
+
+Ne vous inquiètez pas, je mettrai des cours plus beaux à lire avec le temps mdrr
