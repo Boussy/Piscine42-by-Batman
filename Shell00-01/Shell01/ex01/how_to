@@ -1,0 +1,44 @@
+Pour résoudre cet exercice, l'objectif est d'écrire un script shell qui affiche la liste des groupes
+auxquels appartient un utilisateur donné dans la variable d'environnement FT_USER, en les séparant par des virgules sans espaces.
+
+1. Analyser les besoins :
+On veut récupérer les groupes d'un utilisateur dont le nom est spécifié dans la variable FT_USER.
+L'affichage doit être sous forme de liste de groupes séparés par des virgules, sans espaces.
+On peut utiliser la commande id pour obtenir les groupes d'un utilisateur.
+On doit manipuler la sortie de cette commande pour formater correctement le résultat.
+
+2. Commandes utiles :
+id : La commande id permet d'obtenir les informations sur un utilisateur, notamment les groupes auxquels il appartient.
+id -Gn : Cette option affiche les noms des groupes de l'utilisateur, séparés par des espaces.
+tr : Utilisé pour transformer les espaces en virgules.
+cut : Permet de couper des champs si nécessaire, mais ici ce n'est pas indispensable.
+  
+3. Récupérer les groupes d'un utilisateur :
+Avec la commande id -Gn $FT_USER, on peut obtenir tous les groupes de l'utilisateur spécifié dans FT_USER.
+  
+4. Formater la sortie :
+La sortie de id -Gn contient les groupes séparés par des espaces, mais il nous faut les virgules sans espaces.
+Pour cela, on peut utiliser tr pour remplacer les espaces par des virgules.
+
+5. Écrire le script :
+Le script complet va consister en une seule ligne de commande. Voici comment procéder :
+#!/bin/bash
+id -Gn "$FT_USER" | tr ' ' ','
+  
+6. Explication du script :
+id -Gn "$FT_USER" : Affiche la liste des groupes de l'utilisateur spécifié dans la variable d'environnement FT_USER.
+tr ' ' ',' : Remplace tous les espaces par des virgules.
+  
+7. Finalisation du script :
+Le script doit être enregistré dans un fichier nommé print_groups.sh.
+Assurez-vous que le script soit exécutable en utilisant la commande suivante : chmod +x print_groups.sh
+
+8. Exécution du script :
+Si vous avez défini la variable d'environnement FT_USER avant d'exécuter le script, vous pouvez simplement le lancer ainsi : FT_USER=nours ./print_groups.sh
+Le résultat attendu pour FT_USER=nours sera : god,root,admin,master,nours,bocal
+Pour FT_USER=daemon, le résultat sera : daemon,bin
+  
+9. Test :
+Testez le script avec différentes valeurs de FT_USER pour vous assurer que les groupes sont bien affichés, séparés par des virgules, et sans espaces.
+Conclusion :
+Ce script est efficace, simple et répond exactement à la demande en utilisant des commandes de base du shell pour récupérer et manipuler les informations nécessaires.
