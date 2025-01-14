@@ -1,0 +1,108 @@
+Cet exercice consiste à créer un script shell, git_commit.sh, qui affiche les identifiants des 5 derniers commits d'un dépôt Git.
+Cela vous permettra de manipuler les commandes Git en ligne de commande et de comprendre comment extraire des informations à partir d'un dépôt.
+
+Le script devra afficher les identifiants des commits sous la forme de 5 hachages de commits (SHA-1), chacun suivi d'un caractère $, ce qui est demandé dans l'exemple de sortie.
+
+
+Étape 1 : Créer le script
+
+Dans votre répertoire ex05/, commencez par créer le fichier git_commit.sh :
+- mkdir ex05
+- cd ex05
+- touch git_commit.sh
+
+Une fois le fichier créé, vous devrez vous assurer qu'il est exécutable.
+Vous pouvez le faire en donnant les permissions adéquates : chmod +x git_commit.sh
+
+Vous pouvez maintenant ouvrir le fichier dans un éditeur de texte pour y insérer votre script : vi git_commit.sh
+
+  
+
+Étape 2 : Récupérer les 5 derniers commits
+
+Le cœur de la tâche consiste à récupérer les identifiants des 5 derniers commits dans votre dépôt Git.
+Pour cela, Git met à votre disposition une commande très pratique : git log.
+
+Afficher les 5 derniers commits :
+La commande suivante permet de récupérer les 5 derniers commits sous forme de hachages : git log -n 5 --pretty=format:"%H"
+-n 5 : Limite la sortie aux 5 derniers commits.
+--pretty=format:"%H" : Affiche uniquement l'identifiant du commit (SHA-1), sans autres informations comme le message ou l'auteur.
+
+Ajouter un $ à la fin de chaque identifiant :
+Une fois que vous avez extrait les identifiants des commits, vous devez les afficher avec un caractère $ à la fin de chaque commit, comme spécifié dans l'exercice.
+Pour cela, vous pouvez utiliser sed pour ajouter le $ à la fin de chaque ligne.
+Voici comment vous pouvez combiner les commandes : git log -n 5 --pretty=format:"%H" | sed 's/$/$/'
+
+Mettre tout dans le script :
+Dans votre fichier git_commit.sh, vous allez maintenant insérer cette commande. Voici le contenu final du script :
+#!/bin/bash
+git log -n 5 --pretty=format:"%H" | sed 's/$/$/'
+
+#!/bin/bash : Ceci est le shebang, il indique que le script doit être exécuté avec l'interpréteur Bash.
+git log -n 5 --pretty=format:"%H" : Cette commande récupère les 5 derniers commits.
+sed 's/$/$/' : Cette commande sed ajoute un $ à la fin de chaque ligne, comme demandé.
+
+
+
+Étape 3 : Tester le script
+
+Une fois votre script sauvegardé et fermé, vous pouvez l'exécuter avec la commande suivante : ./git_commit.sh
+La sortie devrait ressembler à ceci (avec des hachages réels de vos commits) :
+baa23b54f0adb7bf42623d6d0a6ed4587e11412a$
+2f52d74b1387fa80eea844969e8dc5483b531ac1$
+905f53d98656771334f53f59bb984fc29774701f$
+5ddc8474f4f15b3fcb72d08fcb333e19c3a27078$
+e94d0b448c03ec633f16d84d63beaef9ae7e7be8$
+
+Vérification avec cat -e :
+Pour vérifier le bon format, vous pouvez exécuter la commande cat -e pour afficher les fins de ligne ($) : bash git_commit.sh | cat -e
+La sortie devrait être exactement celle demandée dans l'exercice, avec un $ après chaque identifiant de commit.
+
+
+
+Étape 4 : Soumettre le script
+
+Une fois que tout est en ordre, vous pouvez soumettre votre script dans votre répertoire Git.
+Assurez-vous d'ajouter le fichier à Git, de le committer, puis de pousser les changements vers le serveur.
+
+Ajouter le fichier à Git : git add git_commit.sh
+Valider le fichier : git commit -m "Création du script pour afficher les 5 derniers commits"
+Pousser le fichier : git push
+
+
+
+
+
+
+Résumé des étapes :
+
+Créez un fichier git_commit.sh.
+Utilisez la commande git log pour récupérer les 5 derniers commits.
+Ajoutez un $ à la fin de chaque commit avec sed.
+Testez le script en exécutant ./git_commit.sh et vérifiez la sortie avec cat -e.
+Soumettez le fichier en l'ajoutant à Git et en le poussant vers le serveur.
+
+
+
+
+Commandes récapitulatives :
+
+mkdir ex05
+cd ex05
+touch git_commit.sh
+chmod +x git_commit.sh
+nano git_commit.sh
+-> Insérer le contenu du script :
+# #!/bin/bash
+# git log -n 5 --pretty=format:"%H" | sed 's/$/$/'
+./git_commit.sh
+git add git_commit.sh
+git commit -m "Création du script pour afficher les 5 derniers commits"
+git push
+
+
+
+
+Petit conseil :
+N'hésitez pas à tester votre script dans un dépôt Git où vous avez déjà plusieurs commits pour vous assurer que la sortie est correcte.
+C'est une bonne pratique de tester tout avant de soumettre ! 😊
