@@ -1,0 +1,86 @@
+Bienvenue dans cet exercice de la piscine 42 !
+Cette fois, vous allez créer un fichier spécifique dans un répertoire donné, puis lui appliquer des permissions précises, pour finalement archiver le tout dans un fichier .tar. Cela implique de comprendre et de manipuler des fichiers et des permissions en ligne de commande. Ne vous inquiétez pas, on va avancer étape par étape.
+
+
+Étape 1 : Créer le fichier testShell00
+D'abord, il vous faut créer un répertoire de rendu nommé ex01/, si ce n'est pas déjà fait. Ce répertoire doit contenir votre fichier à rendre (testShell00).
+
+Créez le répertoire avec cette commande : mkdir ex01
+Puis, rendez-vous dans ce répertoire : cd ex01
+
+Ensuite créer un fichier vide testShell00
+Le fichier que vous devez créer est testShell00. On va créer un fichier vide pour l'instant.
+Tapez la commande suivante pour créer ce fichier : touch testShell00
+Cela crée un fichier vide nommé testShell00 dans le répertoire ex01/.
+
+https://www.youtube.com/watch?v=VS45skzxzZo
+
+Étape 2 : Modifier les permissions du fichier testShell00
+L'objectif ici est de configurer les permissions du fichier testShell00 de manière spécifique, selon l'exemple donné dans l'énoncé.
+
+Les permissions à définir sont : -r--r-xr-x
+Décomposons cela :
+
+r : lecture (read)
+- : pas d'écriture (write)
+x : exécution (execute)
+Cela signifie que :
+
+Le propriétaire a seulement la permission de lecture (r--).
+Le groupe a la permission de lecture et d'exécution (r-x).
+Les autres utilisateurs ont aussi la permission de lecture et d'exécution (r-x).
+
+Voici comment faire cela :
+Vérifier les permissions initiales du fichier
+Avant de modifier les permissions, vérifiez ce que votre fichier possède par défaut avec la commande : ls -l testShell00
+Cela doit renvoyer quelque chose comme : -rw-r--r-- 1 user user 0 Jan  1 00:00 testShell00
+
+Par défaut, votre fichier a probablement les permissions rw-r--r-- (lecture et écriture pour le propriétaire, lecture seule pour les autres).
+
+Modifier les permissions avec chmod : utilisez la commande chmod pour modifier les permissions du fichier.
+
+La commande suivante va appliquer les permissions souhaitées : chmod 544 testShell00
+Pour comprendre cette commande je te renvoie vers cette vidéo super utile : https://www.youtube.com/watch?v=VS45skzxzZo
+
+Vérifier les permissions modifiées
+Vérifiez que les permissions ont été modifiées correctement avec la commande : ls -l testShell00
+Tu dois obtenir EXACTEMENT le résultat du sujet.
+
+Une fois que c'est bon place à l'archivage.
+Utilisez la commande suivante pour créer l'archive .tar : tar -cf testShell00.tar testShell00
+
+Explication de la commande :
+
+tar : c'est l'outil de création d'archives.
+-c : crée une nouvelle archive.
+-f : spécifie le nom du fichier archive (testShell00.tar).
+testShell00 : le fichier à inclure dans l'archive.
+Cette commande va créer un fichier appelé testShell00.tar contenant votre fichier testShell00.
+
+Pour vérifier que l'archive a bien été créée, vous pouvez utiliser la commande suivante : ls -l testShell00.tar
+
+
+
+
+Résumé des étapes :
+
+Créez le répertoire ex01/ et le fichier testShell00 à l'intérieur.
+Modifiez les permissions du fichier testShell00 en utilisant la commande chmod 544 testShell00.
+Créez l'archive tar avec la commande tar -cf testShell00.tar testShell00.
+
+
+
+Commandes récapitulatives :
+
+mkdir ex01
+cd ex01
+touch testShell00
+chmod 544 testShell00
+tar -cf testShell00.tar testShell00
+
+
+
+
+Voilà, vous êtes prêts à soumettre votre travail ! 🏆
+
+Bon courage, et surtout, ne vous précipitez pas. Prenez votre temps pour bien comprendre chaque étape, et tout se passera bien ! 😊
