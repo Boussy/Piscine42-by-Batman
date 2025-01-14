@@ -1,6 +1,6 @@
 # 🚀 Bienvenue dans le repo "Piscine42-by-Batman" 🎓
 
-Hey futur(e) stud 42 ! 👋 Si tu es ici, c'est que tu te prépares à rejoindre l'école **42**. Tu veux plonger dans l'univers du codage, mais tu ne sais pas par où commencer ? Pas de panique, **ce repo est fait pour toi** ! 🎯
+Hey futur(e) stud 42 ! 👋 Si tu es ici, c'est que tu te prépares à rejoindre l'école **42**. Tu veux plonger dans l'univers du code, mais tu ne sais pas par où commencer ? Pas de panique, **ce repo est fait pour toi** ! 🎯
 
 ### 🧭 L'objectif
 Cet espace est conçu pour ceux qui souhaitent **intégrer 42** sans forcément avoir une base en programmation. 🌱 Tu trouveras ici des fichiers `how_to` dans chaque dossier, qui te guideront **pas à pas** dans les premiers exercices de la piscine, tout en apprenant les bases du **C** et des principes de l'informatique. Oui, tu vas comprendre les bases de la programmation, **même si tu n'as jamais écrit une seule ligne de code** ! 😎
