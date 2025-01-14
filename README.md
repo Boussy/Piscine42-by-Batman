@@ -54,3 +54,6 @@ Donc, si tu es prêt à relever ce défi, à coder dans **le langage C**, et à 
 Maintenant, tu as toutes les cartes en main pour avancer et t’épanouir dans cette aventure. 🚀 Bonne chance 🔥
 
 ### 🏆 Ready, set, code ! 💻
+
+
+[![HitCount](https://hits.dwyl.com/Boussy/Piscine42-by-Batman.svg?style=flat-square)](http://hits.dwyl.com/Boussy/Piscine42-by-Batman)
