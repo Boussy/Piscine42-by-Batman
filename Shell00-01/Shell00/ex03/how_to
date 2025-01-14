@@ -1,0 +1,104 @@
+Cet exercice est une introduction à l'utilisation des clés SSH.
+Ces clés sont super importantes, car elles vous permettent de vous connecter de manière sécurisée à des serveurs sans avoir besoin de mot de passe à chaque fois.
+Vous allez apprendre à créer votre propre paire de clés SSH, à extraire votre clé publique, et à l'utiliser pour vous authentifier sur l'intranet de l'école 42.
+
+
+Étape 1 : Créer vos clés SSH
+
+Pour commencer, il vous faut générer une paire de clés SSH.
+La paire se compose d'une clé publique (qui peut être partagée) et d'une clé privée (qui doit rester secrète).
+
+Ouvrez votre terminal et tapez la commande suivante : ssh-keygen -t rsa -b 4096 -C "votre_email@exemple.com"
+Explication :
+
+ssh-keygen : c'est la commande pour générer une paire de clés SSH.
+-t rsa : indique que vous voulez utiliser l'algorithme RSA (c'est un standard de sécurité).
+-b 4096 : définit la longueur de la clé à 4096 bits (plus la clé est longue, plus elle est sécurisée).
+-C "votre_email@exemple.com" : vous permet de rajouter un commentaire, généralement votre email, pour identifier la clé.
+
+Choisir un emplacement pour enregistrer la clé
+Vous allez être invité à choisir où enregistrer votre clé privée. Par défaut, elle sera enregistrée dans le dossier ~/.ssh/ sous le nom id_rsa.
+Appuyez simplement sur Entrée pour accepter le chemin par défaut.
+
+Protéger votre clé avec un mot de passe (facultatif)
+Vous pouvez choisir de protéger votre clé privée avec un mot de passe.
+Cela ajoute une couche de sécurité supplémentaire, mais vous pouvez aussi appuyer sur Entrée pour ne pas en définir.
+
+Après ces étapes, votre paire de clés sera générée. Vous aurez deux fichiers :
+- id_rsa (la clé privée)
+- id_rsa.pub (la clé publique)
+Vous devrez partager id_rsa.pub (la clé publique) et garder id_rsa secrète.
+
+
+
+Étape 2 : Ajouter votre clé publique à votre rendu
+
+La clé publique est contenue dans le fichier id_rsa.pub. Vous devez la copier dans votre répertoire de travail.
+
+Pour vérifier son contenu, utilisez la commande suivante : cat ~/.ssh/id_rsa.pub
+Cela vous affiche votre clé publique sur le terminal. 🚫 Ne copiez jamais votre clé privée (id_rsa), seulement la publique (id_rsa.pub) 🚫
+
+Créer le répertoire de rendu et le fichier id_rsa_pub
+Allez dans votre répertoire de rendu (par exemple, ex03/), et créez le fichier id_rsa_pub contenant votre clé publique.
+Vous pouvez le faire en redirigeant la sortie de la commande cat dans un fichier :
+mkdir ex03
+cd ex03
+cat ~/.ssh/id_rsa.pub > id_rsa_pub
+Vérifiez que le fichier est bien créé avec : ls -l id_rsa_pub
+
+
+
+Étape 3 : Mettre à jour votre clé SSH sur l’intranet de 42
+Maintenant que vous avez votre clé publique dans le fichier id_rsa_pub, vous devez l'ajouter à l'intra de l'école 42 pour pouvoir téléverser vos projets sur leur serveur git.
+
+Connectez-vous à l'intra de 42
+Allez sur intra.42.fr, connectez-vous avec vos identifiants.
+
+Accédez à votre profil
+Une fois connecté, allez dans votre profil en haut à droite et cliquez sur "Paramètres".
+
+Ajouter votre clé SSH
+Dans la section "SSH keys", il y a un champ où vous pouvez ajouter une nouvelle clé.
+Ouvrez le fichier id_rsa_pub que vous avez créé, copiez tout son contenu (la clé publique), puis collez-le dans ce champ.
+
+Sauvegarder votre clé
+Cliquez sur "Add key" pour enregistrer votre clé SSH. Cela permettra au serveur de reconnaître votre machine et de vous autoriser à interagir avec les dépôts git.
+
+
+
+VÉRIFICATION : 
+Pour tester si votre clé SSH fonctionne correctement, essayez de vous connecter à l'intranet 42 avec la commande suivante : ssh -T git@intra.42.fr
+Si tout est bien configuré, vous devriez voir un message comme ceci : Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+Cela signifie que votre clé SSH est correctement configurée et prête à être utilisée !
+
+
+
+
+
+
+
+
+Résumé des étapes :
+
+Générer vos clés SSH avec ssh-keygen.
+Vérifier la clé publique avec cat ~/.ssh/id_rsa.pub.
+Créer le fichier id_rsa_pub contenant votre clé publique.
+Ajouter votre clé publique sur l'intranet de 42 dans la section SSH keys.
+Tester la connexion SSH avec ssh -T git@intra.42.fr.
+
+
+
+
+Commandes récapitulatives :
+
+ssh-keygen -t rsa -b 4096 -C "votre_email@exemple.com"
+cat ~/.ssh/id_rsa.pub > ex03/id_rsa_pub
+ls -l ex03/id_rsa_pub
+
+
+  
+
+Petit conseil :
+
+Assurez-vous que vous ne partagez jamais votre clé privée (le fichier id_rsa) ! Elle doit rester secrète. C'est la clé publique (id_rsa.pub) que vous devez partager.
+Bonne chance, et à bientôt pour les prochains exercices ! 😎🚀
