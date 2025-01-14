@@ -8,11 +8,14 @@ Dans cet exercice, nous allons créer un fichier appelé z, et ce fichier devra 
 Allez, on passe aux étapes !
 
 
+
 Étape 1 : Créer le répertoire ex00/
 D'abord, créons un répertoire dans lequel nous allons travailler. Si le répertoire ex00/ existe déjà, vous pouvez passer à l'étape suivante.
 
 Pour créer le répertoire, tapez cette commande dans le terminal : mkdir ex00
-Cela crée un dossier ex00 dans votre répertoire actuel. Vous pouvez y accéder en tapant cd ex00 (ce n'est pas nécessaire pour l'instant, mais ça pourrait être utile pour les étapes suivantes).
+Cela crée un dossier ex00 dans votre répertoire actuel. Vous pouvez y accéder en tapant cd ex00 (ce n'est pas nécessaire pour l'instant,
+mais ça pourrait être utile pour les étapes suivantes).
+
 
 
 Étape 2 : Créer le fichier z
@@ -23,6 +26,7 @@ Ou alors : cd ex00 puis touch z
 La commande touch crée un fichier vide nommé z dans le répertoire ex00/ (voir la commande cd).
 
 
+
 Étape 3 : Ajouter le contenu "Z" suivi d'un retour à la ligne
 Maintenant, il faut que ce fichier affiche "Z" suivi d'un retour à la ligne lorsqu'on le lit avec la commande cat. Pour ça, on va utiliser la commande echo.
 
@@ -31,6 +35,8 @@ Ce qu'il se passe ici :
 echo "Z" affiche simplement la chaîne "Z".
 Le symbole > indique qu'on veut rediriger cette sortie dans un fichier, ici ex00/z.
 Le fichier z contient désormais la chaîne "Z" suivie d'un retour à la ligne (car echo ajoute toujours un retour à la ligne à la fin de la chaîne par défaut).
+
+
 
 
 Étape 4 : Vérifier le contenu du fichier z
@@ -44,6 +50,8 @@ Créer le répertoire ex00 avec mkdir ex00 (si ce n'est pas déjà fait).
 Créer un fichier vide z dans ce répertoire avec touch ex00/z.
 Ajouter "Z" au fichier avec echo "Z" > ex00/z.
 Vérifier le contenu du fichier avec cat ex00/z.
+
+
 
 
 Commandes à retenir :
