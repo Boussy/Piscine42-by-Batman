@@ -1,0 +1,67 @@
+Salut à tous ! 😊
+
+Cet exercice s’appuie directement sur le précédent, donc je vais vous laisser vous débrouiller avec ce que vous avez appris jusqu’ici et ce que vous trouverez sur Internet. 
+Pas de panique, vous avez toutes les clés en main pour réussir. 🗝️
+
+Voici néanmoins les commandes à utiliser pour ce que vous devez faire dans cet exercice :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mkdir ex02
+cd ex02
+mkdir test0 test2
+touch test1 test3 test4 test5
+ln -s test0 test6
+chmod 751 test0
+chmod 751 test1
+chmod 404 test2
+chmod 404 test3
+chmod 751 test4
+chmod 404 test5
+tar -cf exo2.tar *
+
+
+  
+Rappelez-vous, l'objectif est d'appliquer les bonnes permissions et de comprendre ce que vous faites. Prenez votre temps, et surtout, amusez-vous avec ce défi ! 💪
+
+Bonne chance et à très vite ! 🚀
+
