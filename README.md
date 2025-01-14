@@ -56,4 +56,8 @@ Maintenant, tu as toutes les cartes en main pour avancer et t’épanouir dans c
 ### 🏆 Ready, set, code ! 💻
 
 
+
+
+
 [![HitCount](https://hits.dwyl.com/Boussy/Piscine42-by-Batman.svg?style=flat-square)](http://hits.dwyl.com/Boussy/Piscine42-by-Batman)
+[![HitCount](https://hits.dwyl.com/Boussy/Piscine42-by-Batman.svg?style=flat)](http://hits.dwyl.com/Boussy/Piscine42-by-Batman)
