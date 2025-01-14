@@ -13,7 +13,7 @@ Le fichier que vous devez créer est testShell00. On va créer un fichier vide p
 Tapez la commande suivante pour créer ce fichier : touch testShell00
 Cela crée un fichier vide nommé testShell00 dans le répertoire ex01/.
 
-https://www.youtube.com/watch?v=VS45skzxzZo
+
 
 Étape 2 : Modifier les permissions du fichier testShell00
 L'objectif ici est de configurer les permissions du fichier testShell00 de manière spécifique, selon l'exemple donné dans l'énoncé.
