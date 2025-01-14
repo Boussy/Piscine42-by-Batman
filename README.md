@@ -61,4 +61,4 @@ Maintenant, tu as toutes les cartes en main pour avancer et t’épanouir dans c
 
 [![HitCount](https://hits.dwyl.com/Boussy/Piscine42-by-Batman.svg?style=flat-square)](http://hits.dwyl.com/Boussy/Piscine42-by-Batman)
 [![HitCount](https://hits.dwyl.com/Boussy/Piscine42-by-Batman.svg?style=flat)](http://hits.dwyl.com/Boussy/Piscine42-by-Batman)
-https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FBoussy%2FPiscine42-by-Batman.json%3Fcolor%3Dpink
+
