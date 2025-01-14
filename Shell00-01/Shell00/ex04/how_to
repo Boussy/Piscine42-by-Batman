@@ -1,0 +1,16 @@
+Dans cet exercice, vous allez apprendre à utiliser des commandes de base pour manipuler les fichiers et répertoires dans un terminal.
+
+Le but est de lister les fichiers et répertoires du répertoire courant, avec plusieurs conditions spécifiques :
+- Ne pas afficher les fichiers cachés (c'est-à-dire ceux qui commencent par un point).
+- Exclure les répertoires . et ...
+- Séparer les éléments par une virgule et un espace.
+- Les répertoires doivent être suivis d'un slash /.
+- Trier les fichiers par date de modification.
+
+
+Pour cet exercice, je vais vous laisser un peu de liberté pour explorer la commande à utiliser.
+Vous avez déjà vu pas mal d’options de ls dans les exercices précédents, alors utilisez vos connaissances et un peu de recherche pour trouver la bonne combinaison.
+
+N'oubliez pas de tester régulièrement pour vous assurer que vous êtes sur la bonne voie ! 💻🔍
+
+Bonne chance, et amusez-vous bien avec les commandes ! 💪😊
